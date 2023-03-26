@@ -4,8 +4,7 @@ const productRepo = require('../repository/ProductRepository');
 const createProduct = async (product) => { 
     return await productRepo.createProduct(product)
 }
-
-//getProductByName
+ 
 const findProductsByName = async (name) => { 
     return await productRepo.findProductsByName(name);
 }

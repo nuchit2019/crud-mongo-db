@@ -17,10 +17,7 @@ const findProductsByName = async (name) => {
   };
 
 
-const getProductById = async (id) => {
-    //console.log('repo...1.getProductById=',id);
-    //const id2 = new objectId(id);
-    //console.log('repo...2.getProductById=',id2);
+const getProductById = async (id) => { 
     return await Product.findById(id);
 }
 
