@@ -1,16 +1,12 @@
 const productRepo = require('../repository/ProductRepository');
 
 
-const createProduct = async (product) => {
-    console.log('Service..createProduct')
-    console.log('Service..product=', product)
+const createProduct = async (product) => { 
     return await productRepo.createProduct(product)
 }
 
 //getProductByName
-const findProductsByName = async (name) => {
-    console.log('Service..findProductsByName')
-    console.log('name:', name)
+const findProductsByName = async (name) => { 
     return await productRepo.findProductsByName(name);
 }
 
@@ -19,8 +15,7 @@ const getProductById = async (id) => {
     return await productRepo.getProductById(id);
 }
 
-const getAllProducts = async () => {
-    console.log('Service...getAllProducts')
+const getAllProducts = async () => { 
     return await productRepo.getAllProduct();
 }
 

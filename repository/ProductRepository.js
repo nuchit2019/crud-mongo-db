@@ -1,19 +1,11 @@
-const Product = require('../models/Product');
-//const objectId = require('mongodb').ObjectId;
+const Product = require('../models/Product'); 
 
 const createProduct = async (product) => {
     console.log('repo...createProduct');
     console.log('createProduct=',product);
 
     return await Product.create(product);
-}
-
-// const getProductByName = async (name1) => {
-//     console.log('repo..getProductByName')
-//     console.log('name:',name1)
-//     return await Product.findOne({name:name1});
-    
-// }
+} 
 
 const findProductsByName = async (name) => {
     console.log('repo..findProductsByName')
@@ -32,23 +24,18 @@ const getProductById = async (id) => {
     return await Product.findById(id);
 }
 
-const getAllProduct = async () => { 
-    console.log('repo...getAllProduct');
-    console.log('repo...getAllProduct************************************');
+const getAllProduct = async () => {  
     return await Product.find();
 }
 
 const updateProduct = async (id, product) => {
-    console.log('repo...updateProduct');
-    console.log('repo...updateProduct************************************');
+    
     return await Product.findByIdAndUpdate(id, product, {
         new: true,
     })
 }
 
-const deleteProduct = async (id) => {
-    console.log('repo...deleteProduct');
-    console.log('repo...deleteProduct************************************');
+const deleteProduct = async (id) => { 
     return await Product.findByIdAndDelete(id);
 }
 
